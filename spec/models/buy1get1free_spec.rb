@@ -29,7 +29,6 @@ describe Buy1Get1Free do
     
     it "should discount once if 3 matching products are bought" do
       3.times{@products << @fruit_tea}
-      debugger
       discount = @rule.apply(@products)
       discount.should == @fruit_tea.price
     end
